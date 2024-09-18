@@ -1,0 +1,26 @@
+<?php
+namespace app\common\model;
+
+use think\Model;
+
+class Shortvideo extends Model {
+    protected $pk='id';
+    #protected $updateTime='update_time';
+    #protected $createTime='add_time';
+
+
+    public static function addVideo($videoInfo){
+        $baseInfo=[
+            'title'=>'暂无标题',
+            'down_url'=>'',
+            'add_time'=>time(),
+            'thumbnail'=>'',
+            'user_id'=>0,
+            'class_id'=>2,//视频分类，从配置信息中获取
+            'status'=>1,//视频状态，从配置信息中获取
+            'gold'=>2,//观看金币数，从配置信息中获取
+            'is_check'=>1,
+        ];
+    }
+
+}

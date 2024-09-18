@@ -206,10 +206,10 @@ class Auth extends \fast\Auth
 
         $arr = array_map('strtolower', $arr);
         // 是否存在
+
         if (in_array(strtolower($request->action()), $arr) || in_array('*', $arr)) {
             return true;
         }
-
         // 没找到匹配
         return false;
     }

@@ -17,11 +17,12 @@ class Index extends Backend
 {
 
     protected $noNeedLogin = ['login'];
-    protected $noNeedRight = ['index', 'logout'];
+    protected $noNeedRight = ['index', 'logout', "login"];
     protected $layout = '';
 
     public function _initialize()
     {
+
         parent::_initialize();
         //移除HTML标签
         $this->request->filter('trim,strip_tags,htmlspecialchars');
@@ -137,5 +138,4 @@ class Index extends Backend
 
         return $html;
     }
-
 }
